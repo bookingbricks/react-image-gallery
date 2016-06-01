@@ -141,6 +141,7 @@ class App extends React.Component {
           slideInterval={parseInt(this.state.slideInterval)}
           autoPlay={this.state.isPlaying}
           slideOnThumbnailHover={this.state.slideOnThumbnailHover}
+          allImagesLink='http://google.com'
         />
 
         <div className='app-sandbox'>
@@ -239,4 +240,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App/>, document.getElementById('container'))
-

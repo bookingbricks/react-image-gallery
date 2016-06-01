@@ -602,6 +602,9 @@ export default class ImageGallery extends React.Component {
                 <span className='image-gallery-index-total'>
                   {this.props.items.length}
                 </span>
+                { this.props.allImagesLink ?
+                  <span className='image-gallery-index-allImages'><a href={this.props.allImagesLink}>All images</a></span>
+                : null }
               </div>
           }
         </div>
@@ -645,7 +648,8 @@ ImageGallery.propTypes = {
   onClick: React.PropTypes.func,
   onImageLoad: React.PropTypes.func,
   onImageError: React.PropTypes.func,
-  onThumbnailError: React.PropTypes.func
+  onThumbnailError: React.PropTypes.func,
+  allImagesLink: React.PropTypes.string,
 }
 
 ImageGallery.defaultProps = {
@@ -662,5 +666,6 @@ ImageGallery.defaultProps = {
   disableArrowKeys: false,
   indexSeparator: ' / ',
   startIndex: 0,
-  slideInterval: 3000
+  slideInterval: 3000,
+  allImagesLink: null,
 }
