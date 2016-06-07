@@ -694,7 +694,7 @@ var ImageGallery = function (_React$Component) {
               _react2.default.createElement(
                 'a',
                 { href: this.props.allImagesLink },
-                'All images'
+                this.props.allImagesLinkText
               )
             ) : null
           )
@@ -745,7 +745,8 @@ ImageGallery.propTypes = {
   onImageLoad: _react2.default.PropTypes.func,
   onImageError: _react2.default.PropTypes.func,
   onThumbnailError: _react2.default.PropTypes.func,
-  allImagesLink: _react2.default.PropTypes.string
+  allImagesLink: _react2.default.PropTypes.string,
+  allImagesLinkText: _react2.default.PropTypes.string
 };
 
 ImageGallery.defaultProps = {
